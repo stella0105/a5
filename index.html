@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Weather</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <link href="mycss.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-6">
+      <!-- Large button group -->
+      <div class="btn-group">
+        <button class="btn btn-default btn-lg dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+          <font id="location">臺北市</font> <span class="caret"></span>
+        </button>
+        <ul id="dropdown" class="dropdown-menu" role="menu">
+              <li role="presentation"><a id="Taipei City" role="menuitem" tabindex="-1" href="#Taipei City">臺北市 Taipei City</a></li>
+              <li role="presentation"><a id="New North City" role="menuitem" tabindex="-1" href="#New North City">新北市 New North City</a></li>
+              <li role="presentation"><a id="Taichung City" role="menuitem" tabindex="-1" href="#Taichung City">台中市 Taichung City</a></li>
+              <li role="presentation"><a id="Tainan City" role="menuitem" tabindex="-1" href="#Tainan City">臺南市 Tainan City</a></li>
+              <li role="presentation"><a id="Kaohsiung City" role="menuitem" tabindex="-1" href="#Kaohsiung City">高雄市 Kaohsiung City</a></li>
+              <li role="presentation"><a id="Keelung City" role="menuitem" tabindex="-1" href="#Keelung City">基隆市 Keelung City</a></li>
+              <li role="presentation"><a id="Taoyuan City" role="menuitem" tabindex="-1" href="#Taoyuan City">桃園市 Taoyuan City</a></li>
+              <li role="presentation"><a id="Hsinchu City" role="menuitem" tabindex="-1" href="#Hsinchu City">新竹市 Hsinchu City</a></li>
+              <li role="presentation"><a id="Hsinchu County" role="menuitem" tabindex="-1" href="#Hsinchu County">新竹縣 Hsinchu County</a></li>
+              <li role="presentation"><a id="Miaoli County" role="menuitem" tabindex="-1" href="#Miaoli County">苗栗縣 Miaoli County</a></li>
+              <li role="presentation"><a id="Changhua County" role="menuitem" tabindex="-1" href="#Changhua County">彰化縣 Changhua County</a></li>
+              <li role="presentation"><a id="Nantou County" role="menuitem" tabindex="-1" href="#Nantou County">南投縣 Nantou County</a></li>
+              <li role="presentation"><a id="Yunlin County" role="menuitem" tabindex="-1" href="#Yunlin County">雲林縣 Yunlin County</a></li>
+              <li role="presentation"><a id="Chiayi City" role="menuitem" tabindex="-1" href="#Chiayi City">嘉義市 Chiayi City</a></li>
+              <li role="presentation"><a id="Chiayi County" role="menuitem" tabindex="-1" href="#Chiayi County">嘉義縣 Chiayi County</a></li>
+              <li role="presentation"><a id="Pingtung County" role="menuitem" tabindex="-1" href="#Pingtung County">屏東縣 Pingtung County</a></li>
+              <li role="presentation"><a id="Yilan County" role="menuitem" tabindex="-1" href="#Yilan County">宜蘭縣 Yilan County</a></li>
+              <li role="presentation"><a id="Hualien County" role="menuitem" tabindex="-1" href="#Hualien County">花蓮縣 Hualien County</a></li>
+              <li role="presentation"><a id="Taitung County" role="menuitem" tabindex="-1" href="#Taitung County">台東縣 Taitung County</a></li>
+              <li role="presentation"><a id="Penghu County" role="menuitem" tabindex="-1" href="#Penghu County">澎湖縣 Penghu County</a></li>
+              <li role="presentation"><a id="Kinmen County" role="menuitem" tabindex="-1" href="#Kinmen County">金門縣 Kinmen County</a></li>
+              <li role="presentation"><a id="Lianjiang County" role="menuitem" tabindex="-1" href="#Lianjiang County">連江縣 Lianjiang County</a></li>
+        </ul>
+      </div>
+      <div><span id="Ntem" class="temperature">23</span> &#8451;</div>
+    </div>
+    <div class="col-xs-6">
+      <canvas id="today" width="100" height="100"></canvas>
+      <div class="condition">
+          <span id="Ndate" class="date">4 May 2015</span>: <font id="Ntext">Mostly Cloudy</font>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="panel panel-default">
+            <!-- Default panel contents -->
+            <div class="panel-heading">Forecast</div>
+
+            <!-- Table -->
+            <table class="table">
+              <thead>
+                <tr>
+                  <th id="Date1">5 May 2015</th>
+                  <th id="Date2">6 May 2015</th>
+                  <th id="Date3">7 May 2015</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td id="tem1">17-23 &#8451;</td>
+                  <td id="tem2">18-26 &#8451;</td>
+                  <td id="tem3">15-24 &#8451;</td>
+                </tr>
+                <tr>
+                  <td><canvas id="day1" width="64" height="64">Clear</canvas></td>
+                  <td><canvas id="day2" width="64" height="64">Mostly Sunny</canvas></td>
+                  <td><canvas id="day3" width="64" height="64">Mostly Cloudy</canvas></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+    </div>
+  </div>
+
+</div>
+
+<script src="https://code.jquery.com/jquery.min.js"></script>
+<script type="text/javascript" src="https://rawgit.com/RadianSmile/9e48cd4fa58eaa04426f6de87f52c2a7/raw/84f5c09a5a253aa13ad0683ca3ece5d01ea8af79/assign5.getjson.patch.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="https://darkskyapp.github.io/skycons/skycons.js"></script>
+<script src="myapp.js"></script>
+</body>
+</html>
